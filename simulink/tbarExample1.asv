@@ -42,7 +42,6 @@ clength=.35/2 %m
 I = [m/12*(H^2+L^2) 0               0; ....
       0   m/12*(W^2+L^2)            0; ....
       0                 0     m/12*(W^2+H^2)];
-  
 Ixx = I(1,1);
 Iyy = I(2,2);
 Izz = I(3,3);
@@ -53,7 +52,6 @@ t=0:dt:6;
 w1 = zeros(1,length(t));
 w2 = zeros(1,length(t));
 w3 = zeros(1,length(t));
-%{
 %==========================================================================
 %Case 1: w1 and w2 small w3 big initially (stable)
 %==========================================================================
@@ -176,4 +174,3 @@ v = VideoWriter('myMovie.avi')
 open(v)
 writeVideo(v,F)
 close(v)
-%}
